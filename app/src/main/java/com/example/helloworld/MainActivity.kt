@@ -23,21 +23,13 @@ class MainActivity : AppCompatActivity() {
     fun click(view: View) {
         val random:Random = Random();
         var food = list.get(random.nextInt(list.size))
-        // Change the Label Text
         msg.text = "${food}!"
-        // Change the ImageView dynamically
-        //var image = findViewById<ImageView>(R.id.image)
-       //image.setImageResource(R.drawable.img)
     }
 
     fun addFood(view: View) {
         var text = findViewById<EditText>(R.id.name)
         var addedFood = text.text.toString()
         list.add(addedFood)
-        // Change the Label Text
         msg.text = "${addedFood}!"
-        // Change the ImageView dynamically
-        //var image = findViewById<ImageView>(R.id.image)
-        //image.setImageResource(R.drawable.img)
     }
 }
